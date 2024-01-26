@@ -4,13 +4,10 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import { About, Home, Partnership, Roadmap, Sign, WhitePaper } from "./page";
 
-import "./index.css";
-
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./themes/theme.js";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import reportWebVitals from "./reportWebVitals";
 
 const router = createBrowserRouter([
     {
@@ -33,5 +30,3 @@ root.render(
         <RouterProvider router={router} />
     </ThemeProvider>
 );
-
-reportWebVitals();
