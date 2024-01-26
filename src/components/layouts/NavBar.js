@@ -13,7 +13,7 @@ import {
 import { useState } from "react";
 import { Link, Link as RouterLink, useLocation } from "react-router-dom";
 
-import mainLogo from "assets/logo.png";
+import mainLogo from "assets/img/logo.png";
 import { theme } from "themes/theme";
 
 const pages = [
