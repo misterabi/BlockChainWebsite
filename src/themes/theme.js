@@ -18,6 +18,35 @@ export const theme = createTheme({
         }
     },
     typography: {
-        fontSize: 14
+        fontSize: 14,
+        fontFamily: [
+            "Nexa", // Définir Nexa pour les titres
+            "Avenir", // Définir Avenir pour le texte
+            "Roboto", // Par défaut, utilisez Roboto comme police de secours
+            "-apple-system",
+            "BlinkMacSystemFont",
+            '"Segoe UI"',
+            "Arial",
+            "sans-serif",
+            '"Apple Color Emoji"',
+            '"Segoe UI Emoji"',
+            '"Segoe UI Symbol"'
+        ].join(","),
+        h1: {
+            fontSize: "2.5rem",
+            fontWeight: 700,
+            lineHeight: 1.2,
+            letterSpacing: "-0.01562em"
+        },
+        h2: {
+            fontSize: "4rem",
+            fontWeight: 700,
+            lineHeight: 1.2,
+            letterSpacing: "-0.00833em"
+        },
+        button: {
+            textTransform: "none",
+            fontWeight: 500
+        }
     }
 });

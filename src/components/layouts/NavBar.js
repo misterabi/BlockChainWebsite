@@ -1,5 +1,3 @@
-import React, { useState } from "react";
-// import MailOutlinedIcon from "@mui/icons-material/MailOutlined";
 import MenuIcon from "@mui/icons-material/Menu";
 import {
     AppBar,
@@ -12,20 +10,20 @@ import {
     Toolbar,
     Typography
 } from "@mui/material";
-import { Link, Link as RouterLink } from "react-router-dom";
+import { useState } from "react";
+import { Link, Link as RouterLink, useLocation } from "react-router-dom";
 
-import mainLogo from "../assets/logo.png";
+import mainLogo from "assets/logo.png";
+import { theme } from "themes/theme";
 
 const pages = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
-    { name: "WhitePaper", path: "/whitepaper" },
+    { name: "Accueil", path: "/" },
+    { name: "À Propos", path: "/about" },
+    { name: "Livre Blanc", path: "/whitepaper" },
     { name: "Roadmap", path: "/roadmap" },
-    { name: "Partnership", path: "/partnership" },
-    { name: "Sign", path: "/sign" }
+    { name: "Partneriats", path: "/partnership" }
 ];
 
-// function Navbar({ handleClickOpen }) {
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = useState(null);
 
@@ -37,11 +35,26 @@ function Navbar() {
         setAnchorElNav(null);
     };
 
+    const location = useLocation(); // get current Url
+
     return (
-        <AppBar position="fixed">
+        <AppBar
+            position="fixed"
+            sx={{
+                backgroundColor: theme.palette.background.light,
+                boxShadow: "none"
+            }}
+        >
             <Container maxWidth="xl">
-                <Toolbar disableGutters>
-                    {/* logo visible on larger screens */}
+                <Toolbar
+                    disableGutters
+                    sx={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        alignItems: "center"
+                    }}
+                >
+                    {/* Logo */}
                     <Link
                         href="/"
                         sx={{
@@ -50,7 +63,7 @@ function Navbar() {
                             height: "30px"
                         }}
                     >
-                        <img src={mainLogo} alt="Logo Pokédex" />
+                        <img src={mainLogo} alt="Logo DiploEra" />
                     </Link>
 
                     {/* Hamburger menu */}
@@ -64,6 +77,7 @@ function Navbar() {
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
                             color="inherit"
+                            sx={{ color: theme.palette.text.main }}
                         >
                             <MenuIcon />
                         </IconButton>
@@ -92,26 +106,23 @@ function Navbar() {
                                     key={page.name}
                                     onClick={handleCloseNavMenu}
                                 >
-                                    <Typography textAlign="center">
+                                    <Typography
+                                        textAlign="center"
+                                        sx={{
+                                            my: 2,
+                                            color: theme.palette.text.main,
+                                            fontWeight:
+                                                location.pathname === page.path
+                                                    ? "bold"
+                                                    : "normal"
+                                        }}
+                                    >
                                         {page.name}
                                     </Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
-
-                    {/* Logo visible on smaller screens */}
-                    {/* <Link
-                        href="/"
-                        sx={{
-                            display: { xs: "flex", md: "none" },
-                            mr: 1,
-                            height: "30px",
-                            margin: "auto"
-                        }}
-                    >
-                        <img src={mainLogo} alt="Logo Pokédex" />
-                    </Link> */}
 
                     {/* Links */}
                     <Box
@@ -123,7 +134,9 @@ function Navbar() {
                         <Box
                             sx={{
                                 flexGrow: 1,
-                                display: "flex"
+                                display: "flex",
+                                justifyContent: "center",
+                                gap: 4
                             }}
                         >
                             {pages.map((page) => (
@@ -134,40 +147,31 @@ function Navbar() {
                                     onClick={handleCloseNavMenu}
                                     sx={{
                                         my: 2,
-                                        color: "white",
-                                        display: "block"
+                                        color: theme.palette.text.main,
+                                        display: "block",
+                                        fontWeight:
+                                            location.pathname === page.path
+                                                ? "bold"
+                                                : "normal"
                                     }}
                                 >
                                     {page.name}
                                 </Button>
                             ))}
                         </Box>
-                        {/* <Button
+                        <Button
+                            variant="contained"
+                            component={RouterLink}
+                            to="/sign"
+                            onClick={handleCloseNavMenu}
                             sx={{
                                 my: 2,
-                                color: "white",
                                 display: "block"
                             }}
-                            onClick={handleClickOpen}
                         >
-                            Contact
-                        </Button> */}
+                            Connexion
+                        </Button>
                     </Box>
-
-                    {/* ContactIcon */}
-                    {/* <Box
-                        sx={{
-                            display: { xs: "flex", md: "none" }
-                        }}
-                    >
-                        <IconButton
-                            aria-haspopup="true"
-                            onClick={handleClickOpen}
-                            color="inherit"
-                        >
-                            <MailOutlinedIcon />
-                        </IconButton>
-                    </Box> */}
                 </Toolbar>
             </Container>
         </AppBar>
