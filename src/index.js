@@ -9,6 +9,8 @@ import { theme } from "themes/theme.js";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
+import "assets/css/index.css";
+
 const router = createBrowserRouter([
     {
         path: "/",
