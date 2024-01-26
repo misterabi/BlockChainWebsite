@@ -50,6 +50,9 @@ function WhitePaper() {
                     <p>Sarah, responsable des ressources humaines dans une entreprise, reçoit une candidature pour un poste stratégique. Le candidat, John, mentionne dans son CV qu'il détient un diplôme clé pour le rôle.Sarah accède à la plateforme CertifToken et utilise la fonction de vérification en scannant le code QR sur le diplôme de John. La plateforme affiche instantanément les détails du diplôme, y compris le nom de l'institution, le type de diplôme, et la date d'obtention.La vérification immédiate garantit à Sarah que le diplôme de John est authentique. Elle peut prendre des décisions d'embauche en toute confiance, sachant que les informations éducatives fournies sont vérifiées et sécurisées par la blockchain Ethereum.</p>
                 </div>
                 <div>
+                    <h1>Dev et feuille de route</h1>
+                </div>
+                <div>
                     <h1>Collaboration</h1>
                     <p>Collaboration avec les Établissements Éducatifs:CertifToken collaborera étroitement avec les établissements éducatifs pour intégrer la solution de certification décentralisée dans leurs processus. Des partenariats seront établis pour assurer une émission fluide et sécurisée des tokens CertifToken pour chaque diplôme délivré.</p>
                     <p>Intégration avec les Plateformes RH et d'Emploi :CertifToken cherchera à collaborer avec des plateformes de recrutement, des entreprises RH et des services d'emploi en ligne. L'intégration de CertifToken dans ces plateformes simplifiera le processus de vérification des diplômes pour les employeurs et renforcera la crédibilité des candidats.</p>
