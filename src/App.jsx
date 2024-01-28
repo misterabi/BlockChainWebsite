@@ -23,8 +23,8 @@ function App() {
     return (
         <div className="App">
             <Navbar handleClickOpen={handleClickOpen} />
-            <Main>
-                <Container>
+            <Main maxWidth="xl">
+                <Container maxWidth="large" disableGutters={true}>
                     <Outlet />
                 </Container>
             </Main>
