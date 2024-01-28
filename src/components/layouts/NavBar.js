@@ -41,7 +41,7 @@ function Navbar() {
         <AppBar
             position="fixed"
             sx={{
-                backgroundColor: theme.palette.background.light,
+                backgroundColor: theme.palette.light.background,
                 boxShadow: "none"
             }}
         >
@@ -77,7 +77,7 @@ function Navbar() {
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
                             color="inherit"
-                            sx={{ color: theme.palette.text.main }}
+                            sx={{ color: theme.palette.light.text }}
                         >
                             <MenuIcon />
                         </IconButton>
@@ -110,7 +110,7 @@ function Navbar() {
                                         textAlign="center"
                                         sx={{
                                             my: 2,
-                                            color: theme.palette.text.main,
+                                            color: theme.palette.light.text,
                                             fontWeight:
                                                 location.pathname === page.path
                                                     ? "bold"
@@ -147,7 +147,7 @@ function Navbar() {
                                     onClick={handleCloseNavMenu}
                                     sx={{
                                         my: 2,
-                                        color: theme.palette.text.main,
+                                        color: theme.palette.light.text,
                                         display: "block",
                                         fontWeight:
                                             location.pathname === page.path
