@@ -52,7 +52,7 @@ function Footer() {
             <Box
                 component="footer"
                 sx={{
-                    backgroundColor: theme.palette.background.dark,
+                    backgroundColor: theme.palette.dark.background,
                     py: 4
                 }}
             >
@@ -150,8 +150,7 @@ function Footer() {
             </Box>
             <Box
                 sx={{
-                    "background-color": "#0a0d1c",
-                    color: theme.palette.text.light
+                    "background-color": "#0a0d1c"
                 }}
             >
                 <Container maxWidth="lg">
