@@ -24,7 +24,8 @@ import {
   TimelineSeparator,
 } from "@mui/lab";
 
-// import GetIconComponent from "components/utils/GetIconComponent";
+import Header from "components/layouts/Header";
+import IntersectionBlock from "components/IntersectionBlock";
 
 function Roadmap() {
     const roadmapData = [
@@ -135,10 +136,10 @@ function Roadmap() {
         }
       };
   return (
-    <Container maxWidth="large">
-      <Box>
-        <Typography>Header</Typography>
-      </Box>
+    <Container maxWidth="large" disableGutters={true}>
+      <Header section="RoadMap" title="Titre de la section RoadMap" subtitle="Subtitle de la section roadmap"/>
+      {/* TODO: Explication de cette roadmap */}
+      <IntersectionBlock title="DiploEra Roadmap" subtitle="Roadmap"/>
       <Box>
         <Timeline position="alternate">
           {roadmapData.map((item, index) => (
