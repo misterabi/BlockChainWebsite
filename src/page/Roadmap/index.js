@@ -1,5 +1,14 @@
 import React from "react";
-import { Box, Container, Typography } from "@mui/material";
+import {
+  Box,
+  Container,
+  Typography,
+  List,
+  ListItem,
+  ListItemText,
+  ListItemAvatar,
+  Avatar,
+} from "@mui/material";
 
 import VisibilityIcon from "@mui/icons-material/Visibility";
 import AssignmentIcon from "@mui/icons-material/Assignment";
@@ -28,9 +37,48 @@ import IntersectionBlock from "components/IntersectionBlock";
 function Roadmap() {
   const headerData = {
     section: "Roadmap",
-    title: "Titre de la section Roadmap",
-    subtitle: "Subtitle de la section RoadMap",
+    title: "Notre Route vers l'Innovation Éducative",
+    subtitle:
+      "Redéfinir la confiance dans l'éducation en éliminant la contrefaçon des diplômes grâce à la puissance de la technologie blockchain.",
   };
+
+  const roadmapSteps = [
+    {
+      timeline: "Q1 : Janv - Mars",
+      title: "Définition de la Vision et des Objectifs ",
+      description:
+        "Clarification de notre direction et de nos objectifs spécifiques.",
+      icon: VisibilityIcon,
+    },
+    {
+      timeline: "Q1-Q3 : Janv - Sept",
+      title: " Création d'un Use Case et Développement du Proof of Concept",
+      description:
+        "Identification des cas d'utilisation spécifiques et développement d'un prototype pour valider la faisabilité technique.",
+      icon: VisibilityIcon,
+    },
+    {
+      timeline: "Q3 - Q4 : Juill - Déc",
+      title: "Intégration de l'Équipe et Construction du Design",
+      description:
+        "Recrutement des membres clés de l'équipe et développement de l'architecture complète de DiploEra.",
+      icon: VisibilityIcon,
+    },
+    {
+      timeline: "Q4 : Année suivante (Oct - Déc)",
+      title: "Évolution du Proof of Concept",
+      description:
+        "Élargissement du Proof of Concept pour inclure des tests plus étendus.",
+      icon: VisibilityIcon,
+    },
+    {
+      timeline: " Année suivante (Janv - Déc)",
+      title: "Déploiement",
+      description:
+        "Déploiement officiel de DiploEra permettant aux utilisateurs d'émettre, partager et vérifier des diplômes.",
+      icon: VisibilityIcon,
+    },
+  ];
 
   const roadmapData = [
     {
@@ -140,8 +188,57 @@ function Roadmap() {
         subtitle={headerData.subtitle}
       />
       {/* TODO: Explication de cette roadmap */}
+      <Box
+        sx={{
+          textAlign: "center",
+        }}
+      >
+        <Typography variant="h6">
+          Bienvenue sur la roadmap de DiploEra, l'avenir de la certification
+          éducative décentralisée.
+        </Typography>
+        <Typography>
+          Notre parcours est marqué par des étapes cruciales, chaque trimestre
+          apportant une avancée significative dans notre quête pour redéfinir la
+          confiance dans l'éducation.
+        </Typography>
+        <Box>
+          <List
+            sx={{ width: "100%", maxWidth: 360, bgcolor: "background.paper" }}
+          >
+            {roadmapSteps.map((item, index) => (
+              <ListItem key={index}>
+                <ListItemAvatar>
+                  <Avatar></Avatar>
+                </ListItemAvatar>
+                <ListItemText
+                  primary={
+                    <React.Fragment>
+                      {item.title}
+                      <Typography
+                        sx={{ display: "inline" }}
+                        component="span"
+                        variant="body2"
+                        color="text.primary"
+                      >
+                        | {item.timeline}
+                      </Typography>
+                    </React.Fragment>
+                  }
+                  secondary={item.description}
+                />
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+      </Box>
       <IntersectionBlock title="DiploEra Roadmap" subtitle="Roadmap" />
-      <Box>
+      <Box sx={{ textAlign: "center" }}>
+        <Typography variant="h5" sx={{ pb: 8 }}>
+          Découvrez notre plan stratégique qui établit clairement les étapes
+          cruciales de développement, du concept initial à l'intégration
+          complète.
+        </Typography>
         <Timeline position="alternate">
           {roadmapData.map((item, index) => (
             <TimelineItem key={index}>
