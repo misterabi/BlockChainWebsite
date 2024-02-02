@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import React from "react"
 import  {Container} from '@mui/material'
 
@@ -77,3 +78,13 @@ function WhitePaper() {
   
   export default WhitePaper
   
+=======
+import React from 'react'
+import { Container } from '@mui/material'
+
+function WhitePaper() {
+  return <Container maxWidth="md"></Container>
+}
+
+export default WhitePaper
+>>>>>>> 29b7580 (create sign)
