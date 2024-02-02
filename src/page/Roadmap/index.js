@@ -33,8 +33,6 @@ import {
 
 import Header from "components/layouts/Header";
 import IntersectionBlock from "components/IntersectionBlock";
-import Hero from "components/layouts/Hero";
-import { flexbox, width } from "@mui/system";
 
 function Roadmap() {
   const headerData = {
