@@ -117,5 +117,4 @@ function WhitePaper() {
     )
   }
   
-  export default WhitePaper
-  
+  export default WhitePaper;
