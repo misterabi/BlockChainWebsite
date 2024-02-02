@@ -28,8 +28,16 @@ import avatarAbi from "../../assets/avatar-abi.png";
 import avatarSarah from "../../assets/avatar-sarah.png";
 import avatarLeo from "../../assets/avatar-leo.png";
 import TeamMember from "../../components/memberCard";
+import Header from "components/layouts/Header";
 
 function About() {
+  const headerData = 
+    {
+      section: 'À propos',
+      title: 'DiploEra : L\'avenir de l\'éducation, certifié par la blockchain.',
+      subtitle: 'Excellence, accessibilité mondiale, et authenticité, portées par une équipe dévouée.Redéfinissons la confiance ensemble.',
+  };
+
   const valuesData = [
     {
       title: "Innovation",
@@ -194,68 +202,9 @@ function About() {
     <Container
       maxWidth="large"
       disableGutters={true}
-      sx={{
-        width: "100%",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        marginBottom: "5em",
-      }}
     >
       {/* Header Block */}
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-          backgroundColor: "primary.main",
-          //   backgroundImage: `url(${headerImg})`,
-          backgroundRepeat: "no-repeat",
-          backgroundSize: `contain`,
-          backgroundPosition: "center",
-          height: "100vh",
-          width: "100%",
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            width: "50%",
-            height: "100%",
-            mx: 10,
-          }}
-        >
-          <Typography variant="h1" gutterBottom 
-          sx={{
-            fontSize: '4.25rem',
-
-          }}>
-            À propos
-          </Typography>
-          <Typography
-            variant="subtitle1"
-            sx={{
-              fontWeight: "bold",
-              fontSize: "1.75rem",
-            }}
-          >
-            DiploEra : L'avenir de l'éducation, certifié par la blockchain.
-          </Typography>
-          <Typography
-            variant="body1"
-            sx={{
-              textAlign: "center",
-              fontSize: "1.25rem",
-            }}
-          >
-            Excellence, accessibilité mondiale, et authenticité, portées par une équipe dévouée.<br/> 
-            Redéfinissons la confiance ensemble.
-          </Typography>
-        </Box>
-      </Box>
+      <Header section={headerData.section} title={headerData.title} subtitle={headerData.subtitle}/>
       {/* Vision Block */}
       <Box>
         <IntersectionBlock title="Notre Vision" subtitle="Vision" />

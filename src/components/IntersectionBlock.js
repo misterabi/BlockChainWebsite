@@ -16,7 +16,7 @@ export default function IntersectionBlock({title,subtitle}) {
             <Typography variant="h6" sx={{
                 textTransform: "uppercase",
             }}>{subtitle}</Typography>
-            <Typography  varint="h3"sx={{
+            <Typography  variant="h4"sx={{
                 fontWeight: "bold",
                 fontSize: 50,
             }}>{title}</Typography>
