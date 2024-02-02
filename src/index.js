@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import { MetaMaskProvider } from '@metamask/sdk-react'
 
 import App from './App'
-import { About, Home, Partnership, Roadmap, Sign, WhitePaper } from 'page'
+import { About, Home, Partnership, Roadmap, WhitePaper } from 'page'
 
 import { ThemeProvider } from '@mui/material'
 import { theme } from 'themes/theme.js'
@@ -21,8 +21,7 @@ const router = createBrowserRouter([
       { path: '/about', element: <About /> },
       { path: '/partnership', element: <Partnership /> },
       { path: '/roadmap', element: <Roadmap /> },
-      { path: '/whitepaper', element: <WhitePaper /> },
-      { path: '/sign', element: <Sign /> }
+      { path: '/whitepaper', element: <WhitePaper /> }
     ]
   }
 ])
