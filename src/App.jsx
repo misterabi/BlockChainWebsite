@@ -1,15 +1,15 @@
-import { Navbar } from "./components";
-import { styled, Container } from "@mui/material";
-import { Outlet } from "react-router-dom";
+import { styled } from "@mui/material";
+import { Footer, Navbar } from "components/layouts";
 import { useState } from "react";
+import { Outlet } from "react-router-dom";
 
 const Main = styled("main")(({ theme }) => ({
-    backgroundColor: theme.palette.background.main,
-    minHeight: "100vh",
-    padding: "80px 0",
+    backgroundColor: "#fff",
+    // minHeight: "100vh",
+    padding: "68px 0 0",
     display: "flex",
     flexDirection: "column",
-    color: theme.palette.text.main,
+    color: theme.palette.light.text,
     fontSize: theme.palette.fontSize
 }));
 
@@ -24,10 +24,9 @@ function App() {
         <div className="App">
             <Navbar handleClickOpen={handleClickOpen} />
             <Main>
-                <Container>
-                    <Outlet />
-                </Container>
+                <Outlet />
             </Main>
+            <Footer />
         </div>
     );
 }
