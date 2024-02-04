@@ -3,6 +3,7 @@ import React from "react";
 import {
   Box,
   Card,
+  Paper,
   CardMedia,
   CardContent,
   Typography,
@@ -30,13 +31,13 @@ function TeamMember({
   github,
 }) {
   const styles = {
-    experience : {
-      color : 'text.secondary',
-    }
-  }
+    experience: {
+      color: "text.secondary",
+    },
+  };
 
   return (
-    <Card sx={{ maxWidth: '20%' }}>
+    <Paper sx={{ maxWidth: "20%" }} elevation={8}>
       <CardMedia sx={{ height: 225 }} image={avatar} title="team member" />
       <CardContent>
         {/* Name */}
@@ -44,32 +45,54 @@ function TeamMember({
           {name}
         </Typography>
         {/* Social Media */}
-      <CardActions
-        sx={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
-        {linkedIn && (
-          <IconButton href={linkedIn} target="_blank" rel="noopener noreferrer">
-            <LinkedInIcon fontSize="large" />
-          </IconButton>
-        )}
-        {instagram && (
-          <IconButton
-            href={instagram}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <InstagramIcon fontSize="large" />
-          </IconButton>
-        )}
-        {github && (
-          <IconButton href={github} target="_blank" rel="noopener noreferrer">
-            <GitHubIcon fontSize="large" />
-          </IconButton>
-        )}
-      </CardActions>
+        <CardActions
+          sx={{
+            display: "flex",
+            justifyContent: "center",
+          }}
+        >
+          {linkedIn && (
+            <IconButton
+              href={linkedIn}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInIcon
+                fontSize="large"
+                sx={{
+                  color: "primary.main",
+                }}
+              />
+            </IconButton>
+          )}
+          {instagram && (
+            <IconButton
+              href={instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <InstagramIcon
+                fontSize="large"
+                sx={{
+                  color: "white",
+                  background:
+                    "linear-gradient(45deg,#405DE6,#5851DB,#833AB4,#C13584,#E1306C,#FD1D1D)",
+                  borderRadius: "12px",
+                }}
+              />
+            </IconButton>
+          )}
+          {github && (
+            <IconButton href={github} target="_blank" rel="noopener noreferrer">
+              <GitHubIcon
+                fontSize="large"
+                sx={{
+                  color: "dark.background",
+                }}
+              />
+            </IconButton>
+          )}
+        </CardActions>
         {/* Bio */}
         <Typography variant="body2" color="text.secondary">
           {bio}
@@ -81,13 +104,13 @@ function TeamMember({
           }}
         >
           <Typography variant="h6" color="text.secondary">
-            Expérience
+            Expériences
           </Typography>
           <List>
             {exp.map((experience, index) => (
               <React.Fragment key={index}>
                 <ListItem>
-                  <ListItemText primary={experience}/>
+                  <ListItemText primary={experience} />
                 </ListItem>
                 <Divider variant="middle" component="li" />
               </React.Fragment>
@@ -117,12 +140,17 @@ function TeamMember({
         >
           {skills.map((skill, index) => (
             <React.Fragment key={index}>
-              <Chip label={skill} />
+              <Chip
+                label={skill}
+                sx={{
+                  backgroundColor: "light.background",
+                }}
+              />
             </React.Fragment>
           ))}
         </Box>
       </CardContent>
-    </Card>
+    </Paper>
   );
 }
 

@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Container,
-  Box,
-  Typography,
-} from "@mui/material";
-
+import { Container, Box, Typography } from "@mui/material";
 
 import EmojiObjectsIcon from "@mui/icons-material/EmojiObjects";
 import VisibilityIcon from "@mui/icons-material/Visibility";
@@ -23,6 +18,13 @@ import PaperCard from "../../components/paperCard";
 import ElementHighlight from "../../components/elementHighlight";
 
 import headerImg from "../../assets/headerImg.png";
+import imgAuthenticity from "../../assets/authenticity.png";
+import imgAccesibility from "../../assets/worldAccessibility.png";
+import imgPartnership from "../../assets/partnership.png";
+import imgEvolution from "../../assets/evolution.png";
+import imgEducation from "../../assets/education.png";
+import imgEnvironment from "../../assets/environment.png";
+
 import avatarShirley from "../../assets/avatar-shirley.png";
 import avatarAbi from "../../assets/avatar-abi.png";
 import avatarSarah from "../../assets/avatar-sarah.png";
@@ -31,11 +33,13 @@ import TeamMember from "../../components/memberCard";
 import Header from "components/layouts/Header";
 
 function About() {
-  const headerData = 
-    {
-      section: 'À propos',
-      title: 'DiploEra : L\'avenir de l\'éducation, certifié par la blockchain.',
-      subtitle: 'Excellence, accessibilité mondiale, et authenticité, portées par une équipe dévouée.Redéfinissons la confiance ensemble.',
+  const headerData = {
+    section: "À propos",
+    title: "DiploEra : L'avenir de l'éducation, certifié par la blockchain.",
+    subtitle: [
+      "Excellence, accessibilité mondiale, et authenticité, portées par une équipe dévouée.",
+      "Redéfinissons la confiance ensemble.",
+    ],
   };
 
   const valuesData = [
@@ -80,37 +84,37 @@ function About() {
   const missionsData = [
     {
       title: "Authenticité Inébranlable",
-      icon: SecurityIcon,
+      image: imgAuthenticity,
       description:
         "Renforcer la confiance mondiale en éliminant la contrefaçon des diplômes grâce à la blockchain, assurant une sécurité inébranlable.",
     },
     {
       title: "Accessibilité Mondiale",
-      icon: PublicIcon,
+      image: imgAccesibility,
       description:
         "Rendre l'éducation accessible à tous, transcendant les frontières géographiques et économiques pour créer des opportunités équitables.",
     },
     {
       title: "Partenariats Institutionnels",
-      icon: BusinessCenterIcon,
+      image: imgPartnership,
       description:
         "Forger des partenariats institutionnels solides pour intégrer la certification blockchain, assurant une reconnaissance mondiale des diplômes émis.",
     },
     {
       title: "Évolution Continue",
-      icon: TrendingUpIcon,
+      image: imgEvolution,
       description:
         "Rester à la pointe de l'innovation en investissant dans la recherche, le développement de fonctionnalités et d'améliorations constantes.",
     },
     {
       title: "Sensibilisation et Éducation",
-      icon: EmojiObjectsIcon,
+      image: imgEducation,
       description:
         "Jouer un rôle actif dans la sensibilisation à la validation des diplômes par la blockchain, fournissant des ressources éducatives pertinentes",
     },
     {
       title: "Durabilité environnementale",
-      icon: EnergySavingsLeafIcon,
+      image: imgEnvironment,
       description:
         "Intégrer des pratiques durables pour minimiser notre impact sur l'environnement, contribuant ainsi à une planète plus saine et durable.",
     },
@@ -139,9 +143,9 @@ function About() {
       ],
       skills: ["UI/UX Design", "Illustration", "Prototypage"],
       avatar: avatarAbi,
-      linkedIn: 'https://www.linkedin.com/in/nouveau-membre/',
-      instagram: 'https://www.instagram.com/nouveau-membre/',
-      github: 'https://github.com/misterabi',
+      linkedIn: "https://www.linkedin.com/in/nouveau-membre/",
+      instagram: "https://www.instagram.com/nouveau-membre/",
+      github: "https://github.com/misterabi",
     },
     {
       name: "Sarah Hitier",
@@ -152,9 +156,9 @@ function About() {
       ],
       skills: ["Python", "Machine Learning", "Algorithmes quantiques"],
       avatar: avatarSarah,
-      linkedIn: 'https://www.linkedin.com/in/nouveau-membre/',
-      instagram: 'https://www.instagram.com/nouveau-membre/',
-      github: 'https://github.com/Sarah-HITIER',
+      linkedIn: "https://www.linkedin.com/in/nouveau-membre/",
+      instagram: "https://www.instagram.com/nouveau-membre/",
+      github: "https://github.com/Sarah-HITIER",
     },
     {
       name: "Leonardo Kabongo Maundo",
@@ -165,82 +169,98 @@ function About() {
       ],
       skills: ["HTML", "CSS", "React"],
       avatar: avatarLeo,
-      linkedIn: 'https://www.linkedin.com/in/nouveau-membre/',
-      instagram: 'https://www.instagram.com/nouveau-membre/',
-      github: 'https://github.com/leonardo75018',
+      linkedIn: "https://www.linkedin.com/in/nouveau-membre/",
+      instagram: "https://www.instagram.com/nouveau-membre/",
+      github: "https://github.com/leonardo75018",
     },
   ];
 
   const styles = {
     container: {
-      width: "90%",
+      width: "100%",
       height: "auto",
       display: "flex",
       flexDirection: "row",
-      justifyContent: "space-around",
+      justifyContent: "space-evenly",
       alignItems: "center",
       flexWrap: "wrap", // Permet aux éléments de passer à la ligne
     },
     sectionMission: {
       width: "100%",
-      display: "flex",
       height: "30%",
+      backgroundColor: "light.background",
+      pb: "15px",
     },
-    img: {
-      width: "80%",
-      height: "auto",
-    },
-    subtitleSection : {
-      margin : "10px 10px 30px 10px",
-      fontWeight: 500, 
-      fontSize: "18px", 
+    subtitleSection: {
+      margin: "10px 10px 30px 10px",
+      fontWeight: 500,
+      fontSize: "18px",
       textAlign: "center",
     },
   };
 
   return (
-    <Container
-      maxWidth="large"
-      disableGutters={true}
-    >
+    <Container maxWidth="large" disableGutters={true}>
       {/* Header Block */}
-      <Header section={headerData.section} title={headerData.title} subtitle={headerData.subtitle}/>
+      <Header
+        section={headerData.section}
+        title={headerData.title}
+        subtitle={headerData.subtitle}
+      />
       {/* Vision Block */}
-      <Box>
+      <Box
+        sx={{
+          py: "70px",
+        }}
+      >
         <IntersectionBlock title="Notre Vision" subtitle="Vision" />
-        <Typography variant="subtitle2" style={styles.subtitleSection} >
+        <Typography variant="subtitle2" style={styles.subtitleSection}>
           Notre vision à long terme chez DiploEra est de révolutionner le monde
           de l'éducation en apportant une authenticité inégalée aux diplômes
-          grâce à la technologie blockchain. <br/>
-          Nous aspirons à créer un écosystème
-          où chaque individu peut bénéficier d'une validation immuable de ses
-          réalisations académiques, professionnelles et personnelles. <br/>
-          Notre objectif ultime est de redéfinir la confiance dans les diplômes en les
-          ancrant de manière sécurisée et transparente dans la blockchain.
+          grâce à la technologie blockchain. <br />
+          Nous aspirons à créer un écosystème où chaque individu peut bénéficier
+          d'une validation immuable de ses réalisations académiques,
+          professionnelles et personnelles. <br />
+          Notre objectif ultime est de redéfinir la confiance dans les diplômes
+          en les ancrant de manière sécurisée et transparente dans la
+          blockchain.
         </Typography>
       </Box>
       {/* Values Block */}
-      <IntersectionBlock title="Nos valeurs" subtitle="Values" />
-      <Box style={styles.container}>
-        {valuesData.map((value, index) => {
-          return (
-            <PaperCard
-              key={index}
-              icon={value.icon}
-              title={value.title}
-              description={value.description}
-            />
-          );
-        })}
+      <Box
+        sx={{
+          paddingTop: 5,
+          backgroundColor: "#0d1123",
+        }}
+      >
+        <IntersectionBlock title="Nos valeurs" subtitle="Values" />
+        <Box style={styles.container}>
+          {valuesData.map((value, index) => {
+            return (
+              <PaperCard
+                key={index}
+                icon={value.icon}
+                title={value.title}
+                description={value.description}
+                square={false}
+              />
+            );
+          })}
+        </Box>
       </Box>
       {/* Mission Block */}
-      <IntersectionBlock title="Nos missions" subtitle="Missions" />
+      <IntersectionBlock
+        title="Nos missions"
+        subtitle="Missions"
+        bgColor="light.background"
+      />
       <Box
         sx={{
           display: "flex",
           flexDirection: "column",
           justifyContent: "center",
           alignItems: "center",
+          backgroundColor: "light.background",
         }}
       >
         <Typography
@@ -255,64 +275,62 @@ function About() {
           réduire les disparités éducatives et de créer un impact durable dans
           le monde entier.
         </Typography>
-        <Container maxWidth="large" style={styles.sectionMission}>
+        <Box style={styles.sectionMission}>
           <Box
             sx={{
-              width: "40%",
-              margin: "10px auto",
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
-            <img
-              src={headerImg}
-              alt="Description de l'image"
-              style={styles.img}
-            />
-          </Box>
-          <Box
-            sx={{
-              width: "55%",
-              margin: "12px auto",
               display: "flex",
               alignItems: "center",
               justifyContent: "space-evenly",
               flexWrap: "wrap",
+              backgroundColor: "light.background",
+              pb: 8,
             }}
           >
             {missionsData.map((value, index) => {
               return (
                 <ElementHighlight
                   key={index}
-                  icon={value.icon}
+                  img={value.image}
                   title={value.title}
                   description={value.description}
                 />
               );
             })}
           </Box>
-        </Container>
+        </Box>
       </Box>
       {/* Team Block */}
       <IntersectionBlock title="Notre équipe" subtitle="Team" />
-      <Box sx={{ width : '100%', textAlign: 'center'}}>
+      <Box
+        sx={{
+          width: "100%",
+          textAlign: "center",
+          pb: 10,
+        }}
+      >
         <Typography variant="body1" style={styles.subtitleSection}>
-        Rencontrez notre équipe passionnée et dévouée qui donne vie à notre vision.<br/>
-        Chacun de nos membres apporte une touche unique, des compétences exceptionnelles et une énergie créative à notre projet. <br/>
-        Découvrez qui se cache derrière les lignes de code et les conceptions innovantes, et apprenez-en plus sur les personnes qui font de notre équipe un moteur de réussite.
+          Rencontrez notre équipe passionnée et dévouée qui donne vie à notre
+          vision.
+          <br />
+          Chacun de nos membres apporte une touche unique, des compétences
+          exceptionnelles et une énergie créative à notre projet. <br />
+          Découvrez qui se cache derrière les lignes de code et les conceptions
+          innovantes, et apprenez-en plus sur les personnes qui font de notre
+          équipe un moteur de réussite.
         </Typography>
-        <Box sx={{ 
-          width: '100%',
-          display: 'flex',
-          justifyContent: 'space-around',
-          flexWrap: 'wrap',
-          marginTop: '40px',
-        }}>
-          {
-            teamData.map((member, index) => (
-              <TeamMember key={index} {...member}/>
-            ))}
+        <Box
+          sx={{
+            width: "100%",
+            display: "flex",
+            justifyContent: "space-around",
+            flexWrap: "wrap",
+            marginTop: "40px",
+            pt: 8,
+          }}
+        >
+          {teamData.map((member, index) => (
+            <TeamMember key={index} {...member} />
+          ))}
         </Box>
       </Box>
     </Container>
