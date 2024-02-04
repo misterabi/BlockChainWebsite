@@ -3,14 +3,13 @@ import { Box } from "@mui/material";
 function ElementHighlight({ icon: Icon, title, description }) {
     const styles = {
         container: {
-            textAlign: 'justify',
             width: '30%',
-            height: 'auto',
             display: 'flex',
             flexDirection: 'column',
             justifyContent: 'start',
             alignItems: 'center',
-            paddingTop: '15px',
+            marginTop: '15px',
+            textAlign: 'center',
           },
           icon: {
             fontSize: '1.5rem',
@@ -30,9 +29,9 @@ function ElementHighlight({ icon: Icon, title, description }) {
       <Box className="paper-card" style={styles.container}>
         <div className="icon">{Icon && <Icon sx= {{
             fontSize: 2,
-            width: 80,
-            height: 80,
-            color: 'primary.main'
+            width: 70,
+            height: 70,
+            color: 'primary.main',
             }}
         />}</div>
         <h2 style={styles.title}>{title}</h2>

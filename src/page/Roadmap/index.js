@@ -39,7 +39,7 @@ function Roadmap() {
     section: "Roadmap",
     title: "Notre Route vers l'Innovation Éducative",
     subtitle:
-      "Redéfinir la confiance dans l'éducation en éliminant la contrefaçon des diplômes grâce à la puissance de la technologie blockchain.",
+      ["Redéfinir la confiance dans l'éducation en éliminant la contrefaçon des diplômes grâce à la puissance de la technologie blockchain."],
   };
 
   const roadmapIntroduction = [

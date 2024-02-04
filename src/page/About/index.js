@@ -35,8 +35,8 @@ function About() {
     {
       section: 'À propos',
       title: 'DiploEra : L\'avenir de l\'éducation, certifié par la blockchain.',
-      subtitle: 'Excellence, accessibilité mondiale, et authenticité, portées par une équipe dévouée.Redéfinissons la confiance ensemble.',
-  };
+      subtitle: ['Excellence, accessibilité mondiale, et authenticité, portées par une équipe dévouée.','Redéfinissons la confiance ensemble.'],
+    };
 
   const valuesData = [
     {
@@ -173,11 +173,11 @@ function About() {
 
   const styles = {
     container: {
-      width: "90%",
+      width: "100%",
       height: "auto",
       display: "flex",
       flexDirection: "row",
-      justifyContent: "space-around",
+      justifyContent: "space-evenly",
       alignItems: "center",
       flexWrap: "wrap", // Permet aux éléments de passer à la ligne
     },
@@ -258,22 +258,22 @@ function About() {
         <Container maxWidth="large" style={styles.sectionMission}>
           <Box
             sx={{
-              width: "40%",
-              margin: "10px auto",
+              width: "35%",
               display: "flex",
               flexDirection: "column",
               alignItems: "center",
+              justifyContent: "center",
             }}
           >
             <img
               src={headerImg}
-              alt="Description de l'image"
+              alt="Icone de l'équipe"
               style={styles.img}
             />
           </Box>
           <Box
             sx={{
-              width: "55%",
+              width: "65%",
               margin: "12px auto",
               display: "flex",
               alignItems: "center",
