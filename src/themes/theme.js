@@ -17,7 +17,8 @@ export const theme = createTheme({
         },
         dark: {
             background: "#0d1123",
-            text: "#fff"
+            text: "#fff",
+            border: "#3b3e4c"
         }
     },
     typography: {
@@ -53,10 +54,16 @@ export const theme = createTheme({
             letterSpacing: 1,
             marginBottom: "1rem"
         },
+        h4: {
+            fontSize: "1.5rem",
+            fontWeight: 500,
+            lineHeight: 1.2
+        },
 
         p: {
             fontSize: "1rem",
-            lineHeight: 1.5
+            lineHeight: 1.5,
+            textAlign: "justify"
         }
     },
     components: {
