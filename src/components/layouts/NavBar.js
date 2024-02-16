@@ -23,7 +23,7 @@ const pages = [
     { name: "À Propos", path: "/about" },
     { name: "Livre Blanc", path: "/whitepaper" },
     { name: "Roadmap", path: "/roadmap" },
-    { name: "Partneriats", path: "/partnership" }
+    { name: "Partenariats", path: "/partnership" }
 ];
 
 function Navbar() {
