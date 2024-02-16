@@ -45,7 +45,7 @@ function Navbar() {
                 boxShadow: "none"
             }}
         >
-            <Container maxWidth="xl">
+            <Container maxWidth="lg">
                 <Toolbar
                     disableGutters
                     sx={{
