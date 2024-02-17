@@ -60,7 +60,7 @@ const Title = ({ datas, options }) => {
         );
 
         return (
-            <Typography variant={variant} sx={{ mb: 2 }}>
+            <Typography variant={variant} sx={{ ...options.style, mb: 2 }}>
                 {formattedTitle}
             </Typography>
         );
