@@ -1,14 +1,11 @@
 import { Box, Typography } from "@mui/material";
 
-function Header({ section, title, subtitle }) {
+function Header({ section, title, subtitle, headerImg }) {
   return (
     <Box>
       <Box
         sx={{
-          display: "flex",
-          justifyContent: "center",
-          backgroundColor: "primary.main",
-          //   backgroundImage: `url(${headerImg})`,
+          backgroundImage: `url(${headerImg})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: `contain`,
           backgroundPosition: "center",
@@ -18,19 +15,18 @@ function Header({ section, title, subtitle }) {
       >
         <Box
           sx={{
+            height: "100%",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            width: "60%",
-            height: "100%",
           }}
         >
           <Typography
             variant="h1"
             gutterBottom
             sx={{
-              fontSize: "4.25rem",
+              fontSize: "4.5em",
             }}
           >
             {section}
@@ -47,7 +43,8 @@ function Header({ section, title, subtitle }) {
           </Typography>
 
           {subtitle.map((line, index) => (
-            <Typography key={index}
+            <Typography
+              key={index}
               variant="body1"
               sx={{
                 textAlign: "center",

@@ -13,7 +13,7 @@ function PaperCard({ icon: Icon, title, description }) {
       alignItems: "center",
     },
     title: {
-      fontSize: "1rem",
+      fontSize: "1.25rem",
       fontWeight: "bold",
       marginBottom: "8px",
       color: "primary.main", // Couleur du titre

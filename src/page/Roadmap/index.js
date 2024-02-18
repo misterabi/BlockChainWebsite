@@ -21,6 +21,7 @@ import TimelineIcon from "@mui/icons-material/Timeline";
 import LaunchIcon from "@mui/icons-material/Launch";
 import BrowserUpdatedIcon from "@mui/icons-material/BrowserUpdated";
 import CodeIcon from "@mui/icons-material/Code";
+import PsychologyIcon from "@mui/icons-material/Psychology";
 
 import {
   Timeline,
@@ -31,6 +32,8 @@ import {
   TimelineSeparator,
 } from "@mui/lab";
 
+import { theme } from "themes/theme";
+import headerImg from "../../assets/roadmap_header.jpeg";
 import Header from "components/layouts/Header";
 import IntersectionBlock from "components/IntersectionBlock";
 
@@ -38,17 +41,26 @@ function Roadmap() {
   const headerData = {
     section: "Roadmap",
     title: "Notre Route vers l'Innovation Éducative",
-    subtitle:
-      ["Redéfinir la confiance dans l'éducation en éliminant la contrefaçon des diplômes grâce à la puissance de la technologie blockchain."],
+    subtitle: [
+      "Redéfinir la confiance dans l'éducation en éliminant la contrefaçon des diplômes grâce à la puissance de la technologie blockchain.",
+    ],
+    img: headerImg,
+  };
+
+  const options = {
+    imagePosition: "left",
+    theme: "dark",
   };
 
   const roadmapIntroduction = [
+    "Bienvenue sur la roadmap de DiploEra,",
+    "l'avenir de la certification éducative décentralisée.",
     "Notre parcours est guidé par une vision ambitieuse : redéfinir la confiance dans l'éducation en éliminant la contrefaçon des diplômes grâce à la puissance de la technologie blockchain.",
     "Découvrez notre plan stratégique qui établit clairement les étapes cruciales de développement, du concept initial à l'intégration complète.",
     "Chaque trimestre marque une avancée significative, allant de l'exploration technologique à l'adoption mondiale de DiploEra.",
     "Rejoignez-nous alors que nous façonnons l'avenir de la certification éducative, repoussant les limites de l'innovation, de la sécurité, et de l'accessibilité.",
     "Suivez notre roadmap pour être témoin des progrès de DiploEra dans la création d'un monde où chaque diplôme est authentifié, accessible et mondialement reconnu.",
-  ]
+  ];
 
   const roadmapSteps = [
     {
@@ -56,35 +68,35 @@ function Roadmap() {
       title: "Définition de la Vision et des Objectifs ",
       description:
         "Clarification de notre direction et de nos objectifs spécifiques.",
-      icon: VisibilityIcon,
+      icon: PsychologyIcon,
     },
     {
       timeline: "Q1-Q3 : Janv - Sept",
       title: " Création d'un Use Case et Développement du Proof of Concept",
       description:
         "Identification des cas d'utilisation spécifiques et développement d'un prototype pour valider la faisabilité technique.",
-      icon: VisibilityIcon,
+      icon: AssignmentIcon,
     },
     {
       timeline: "Q3 - Q4 : Juill - Déc",
       title: "Intégration de l'Équipe et Construction du Design",
       description:
         "Recrutement des membres clés de l'équipe et développement de l'architecture complète de DiploEra.",
-      icon: VisibilityIcon,
+      icon: DesignServicesIcon,
     },
     {
       timeline: "Q4 : Année suivante (Oct - Déc)",
       title: "Évolution du Proof of Concept",
       description:
         "Élargissement du Proof of Concept pour inclure des tests plus étendus.",
-      icon: VisibilityIcon,
+      icon: BuildIcon,
     },
     {
       timeline: " Année suivante (Janv - Déc)",
       title: "Déploiement",
       description:
         "Déploiement officiel de DiploEra permettant aux utilisateurs d'émettre, partager et vérifier des diplômes.",
-      icon: VisibilityIcon,
+      icon: LaunchIcon,
     },
   ];
 
@@ -97,6 +109,7 @@ function Roadmap() {
         "Définir clairement la vision à long terme et les objectifs spécifiques de DiploEra.",
       ],
       icon: VisibilityIcon,
+      color: "#1C3573",
     },
     {
       timeline: "Q1-Q2",
@@ -106,6 +119,7 @@ function Roadmap() {
         "Développer des scénarios concrets d'application du service.",
       ],
       icon: AssignmentIcon,
+      color: "#233D80",
     },
     {
       timeline: "Q1-Q2",
@@ -114,6 +128,7 @@ function Roadmap() {
         "Concevoir un modèle économique basé sur le token de DiploEra, détaillant son utilisation, sa distribution, et son impact sur l'écosystème.",
       ],
       icon: AccountBalanceIcon,
+      color: "#2F4E9D",
     },
     {
       timeline: "Q2",
@@ -124,6 +139,7 @@ function Roadmap() {
         "Former le personnel sur les aspects techniques et opérationnels du projet.",
       ],
       icon: Groups2Icon,
+      color: "#3C60B5",
     },
     {
       timeline: "Q2-Q3",
@@ -133,6 +149,7 @@ function Roadmap() {
         "Explorer les fonctionnalités clés, notamment l'émission, la vérification, et le stockage sécurisé des diplômes.",
       ],
       icon: BuildIcon,
+      color: "#4265B7",
     },
     {
       timeline: "Q2-Q3",
@@ -142,6 +159,7 @@ function Roadmap() {
         "Établir un plan détaillé pour le développement continu, les mises à jour et la maintenance du projet.",
       ],
       icon: TrendingUpIcon,
+      color: "#5D7BC0",
     },
     {
       timeline: "Q3-Q4",
@@ -151,6 +169,7 @@ function Roadmap() {
         "Affiner les fonctionnalités et l'expérience utilisateur.",
       ],
       icon: DesignServicesIcon,
+      color: "#6C87C6",
     },
     {
       timeline: "Q3 - Année Suivante",
@@ -159,6 +178,7 @@ function Roadmap() {
         "Établir un plan détaillé pour le développement continu, les mises à jour et la maintenance du projet",
       ],
       icon: CodeIcon,
+      color: "#7B94CC",
     },
     {
       timeline: "Q4-Année suivante",
@@ -168,6 +188,7 @@ function Roadmap() {
         "Identifier et résoudre tout problème identifié pendant cette phase.",
       ],
       icon: TimelineIcon,
+      color: "#8AA2D0",
     },
     {
       timeline: "Année suivante",
@@ -177,6 +198,7 @@ function Roadmap() {
         "Lancer des campagnes marketing pour promouvoir l'adoption de la plateforme.",
       ],
       icon: LaunchIcon,
+      color: "#9AB0D5",
     },
     {
       timeline: "Tout au Long du Projet",
@@ -185,6 +207,7 @@ function Roadmap() {
         "Planifier des révisions régulières de la roadmap pour refléter les progrès réalisés, les nouvelles opportunités et les ajustements stratégiques éventuels.",
       ],
       icon: BrowserUpdatedIcon,
+      color: "#B7C6E1",
     },
   ];
 
@@ -194,6 +217,7 @@ function Roadmap() {
         section={headerData.section}
         title={headerData.title}
         subtitle={headerData.subtitle}
+        headerImg={headerData.headerImg}
       />
       {/* TODO: Explication de cette roadmap */}
       <Box
@@ -204,19 +228,11 @@ function Roadmap() {
           alignItems: "center",
           textAlign: "center",
           width: "100%",
-          my: 8,
+          py: 4,
+          backgroundColor: "#0d1123",
+          color: "#fff",
         }}
-      >
-        <Typography variant="h5" fontWeight={500} fontSize={28}>
-          Bienvenue sur la roadmap de DiploEra, l'avenir de la certification
-          éducative décentralisée.
-        </Typography>
-        <Typography variant="subtitle1" fontSize={22} width="80%">
-          Notre parcours est marqué par des étapes cruciales, chaque trimestre
-          apportant une avancée significative dans notre quête pour redéfinir la
-          confiance dans l'éducation.
-        </Typography>
-      </Box>
+      ></Box>
       <Box
         sx={{
           width: "100%",
@@ -224,23 +240,41 @@ function Roadmap() {
           alignItems: "center",
           justifyContent: "space-around",
           mb: 12,
+          backgroundColor: "#0d1123",
+          color: "#fff",
+          py: 4,
         }}
       >
         {/* Roadmap introduction text */}
-        <Box sx={{
+        <Box
+          sx={{
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
             width: "50%",
-          }}>
-            {
-              roadmapIntroduction.map((item, index) => (
-                <Typography key={index} variant="subtitle2" fontSize={18} sx={{textAlign:'justify', my:3, width:'80%'}}>
-                  {item}
-                </Typography>
-              ))
-            }
+          }}
+        >
+          {roadmapIntroduction.map((item, index) => (
+            <Typography
+              key={index}
+              variant={index < 2 ? "h1" : "subtitle2"}
+              fontSize={index < 2 ? "2em" : "18px"}
+              sx={{
+                textAlign: "justify",
+                my: 2,
+                width: "80%",
+                ...(index < 2 && {
+                  backgroundImage: theme.palette.primary.mainGradient,
+                  backgroundClip: "text",
+                  color: "transparent",
+                  fontSize: "30px",
+                }),
+              }}
+            >
+              {item}
+            </Typography>
+          ))}
         </Box>
         {/* Roadmap introduction */}
         <Box
@@ -252,30 +286,55 @@ function Roadmap() {
           }}
         >
           <List
-            sx={{  
-              maxWidth: "70%", 
-              bgcolor: "background.paper",
+            sx={{
+              maxWidth: "70%",
+              bgcolor: "light.background",
               margin: "0 auto",
-              p: 4,
+              px: 2,
               boxShadow: 3,
-              borderRadius: 4, 
+              borderRadius: 4,
             }}
           >
             {roadmapSteps.map((item, index) => (
-              <ListItem key={index}>
+              <ListItem
+                key={index}
+                sx={{
+                  display: "flex",
+                  justifyContent: "flex-start",
+                  alignItems: "center",
+                }}
+              >
                 <ListItemAvatar>
-                  <Avatar></Avatar>
+                  <item.icon
+                    sx={{
+                      fontSize: "40px",
+                      color: "secondary.main",
+                    }}
+                  />
                 </ListItemAvatar>
                 <ListItemText
+                  sx={{
+                    display: "flex",
+                    flexDirection: "column",
+                    justifyContent: "center",
+                  }}
                   primary={
                     <React.Fragment>
-                      <Typography variant="h6">{item.title}</Typography>
+                      <Typography
+                        variant="h6"
+                        sx={{
+                          color: "light.text",
+                          fontWeight: "bold",
+                        }}
+                      >
+                        {item.title}
+                      </Typography>
                       <Typography
                         sx={{
-                          display: "inline",
                           width: "100%",
                           textAlign: "right",
                           fontSize: 16,
+                          color: "secondary.main",
                         }}
                         component="span"
                         variant="sutitle1"
@@ -304,7 +363,7 @@ function Roadmap() {
           {roadmapData.map((item, index) => (
             <TimelineItem key={index}>
               <TimelineSeparator>
-                <TimelineDot>
+                <TimelineDot sx={{ backgroundColor: item.color }}>
                   {/* Icon composant created dynamically */}
                   {
                     <item.icon
@@ -317,11 +376,17 @@ function Roadmap() {
                 {index < roadmapData.length - 1 && <TimelineConnector />}
               </TimelineSeparator>
               <TimelineContent sx={{ py: "12px", px: 2, my: "18px" }}>
-                <Typography variant="h5" component="span">
+                <Typography
+                  variant="h5"
+                  component="span"
+                  sx={{ color: item.color, fontWeight: "bold" }}
+                >
                   ({item.timeline}) {item.title || item.steps}
                 </Typography>
                 {item.description.map((desc, i) => (
-                  <Typography key={i}>{desc}</Typography>
+                  <Typography key={i} variant="subtitle1">
+                    {desc}
+                  </Typography>
                 ))}
               </TimelineContent>
             </TimelineItem>
