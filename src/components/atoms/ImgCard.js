@@ -4,13 +4,14 @@ const { Paper } = require("@mui/material");
 const ImgCard = ({ datas, options }) => {
     return (
         <Paper
-            elevation={options.elevation ? options.elevation : 12}
+            elevation={options.elevation ? options.elevation : 1}
             sx={{
                 p: 2,
                 textAlign: "center",
                 backgroundColor: theme.palette[options.theme]["background"],
-                border: "1px solid" + theme.palette[options.theme]["border"]
-                // width: "fit-content"
+                border: options.border
+                    ? "1px solid" + theme.palette[options.theme]["border"]
+                    : ""
             }}
         >
             <img

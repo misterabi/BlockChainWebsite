@@ -15,17 +15,18 @@
  */
 
 import { Box, Button, Container, Typography } from "@mui/material";
-import { Title } from "components/molecules";
+import { Title } from "components/atoms";
 import { theme } from "themes/theme";
 
-const Hero = ({ datas, options }) => {
+const Hero = ({ datas, options, style }) => {
     return (
         <Box
             sx={{
                 backgroundColor: options.theme
                     ? theme.palette[options.theme]["background"]
                     : "#fff",
-                py: 8
+                py: 8,
+                ...style
             }}
         >
             <Container maxWidth="lg">
@@ -47,14 +48,11 @@ const Hero = ({ datas, options }) => {
                                 title: datas.title,
                                 subtitle: datas.subtitle
                             }}
-                            options={{ theme: options.theme }}
+                            options={{
+                                theme: options.theme,
+                                style: options.titleStyle
+                            }}
                         />
-
-                        {/* Subtitle */}
-                        {/* {datas.subtitle && formatTitle(datas.subtitle, "h3")} */}
-
-                        {/* Title */}
-                        {/* {datas.title && formatTitle(datas.title, "h2")} */}
 
                         {/* Texts */}
                         {datas.texts && (
@@ -68,7 +66,12 @@ const Hero = ({ datas, options }) => {
                                 }}
                             >
                                 {datas.texts.map((text, index) => (
-                                    <p key={index}>{text}</p>
+                                    <p
+                                        key={index}
+                                        dangerouslySetInnerHTML={{
+                                            __html: text
+                                        }}
+                                    />
                                 ))}
                             </Typography>
                         )}

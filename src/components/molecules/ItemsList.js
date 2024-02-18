@@ -1,20 +1,23 @@
 import { Box, Container, Grid } from "@mui/material";
-import { NumberCard } from "components/molecules";
-import { ImgCard } from "components/molecules";
+import { ImgCard } from "components/atoms";
+import { PaperCard } from "components/atoms";
+import { TestimonialCard } from "components/atoms";
 import React from "react";
 import { theme } from "themes/theme";
 
-const ItemsList = ({ type, items, options }) => {
+const ItemsList = ({ type, items, options, style }) => {
     const components = {
-        NumberCard,
-        ImgCard
+        ImgCard,
+        PaperCard,
+        TestimonialCard
     };
 
     return (
         <Box
             sx={{
                 backgroundColor: theme.palette[options.theme]["background"],
-                pb: 8
+                pb: 8,
+                ...style
             }}
         >
             <Container maxWidth="lg">
@@ -22,7 +25,9 @@ const ItemsList = ({ type, items, options }) => {
                     container
                     spacing={3}
                     justifyContent="center"
-                    alignItems="center"
+                    alignItems={
+                        options.alignItems ? options.alignItems : "flex-start"
+                    }
                 >
                     {items.map((item, index) => {
                         return (
@@ -30,15 +35,15 @@ const ItemsList = ({ type, items, options }) => {
                                 key={index}
                                 item
                                 xs={
-                                    options.breadcrumbs &&
-                                    options.breadcrumbs.xs
-                                        ? options.breadcrumbs.xs
+                                    options.breakpoints &&
+                                    options.breakpoints.xs
+                                        ? options.breakpoints.xs
                                         : 6
                                 }
                                 md={
-                                    options.breadcrumbs &&
-                                    options.breadcrumbs.xs
-                                        ? options.breadcrumbs.xs
+                                    options.breakpoints &&
+                                    options.breakpoints.xs
+                                        ? options.breakpoints.xs
                                         : 3
                                 }
                             >

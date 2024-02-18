@@ -1,3 +1,5 @@
+import { useSDK } from "@metamask/sdk-react";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import {
     AppBar,
@@ -21,11 +23,12 @@ const pages = [
     { name: "À Propos", path: "/about" },
     { name: "Livre Blanc", path: "/whitepaper" },
     { name: "Roadmap", path: "/roadmap" },
-    { name: "Partneriats", path: "/partnership" }
+    { name: "Partenariats", path: "/partnership" }
 ];
 
 function Navbar() {
     const [anchorElNav, setAnchorElNav] = useState(null);
+    const { sdk } = useSDK();
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -36,6 +39,14 @@ function Navbar() {
     };
 
     const location = useLocation(); // get current Url
+
+    const Sign = async () => {
+        try {
+            const accounts = await sdk?.connect();
+        } catch (err) {
+            console.warn(`failed to connect..`, err);
+        }
+    };
 
     return (
         <AppBar
@@ -161,9 +172,7 @@ function Navbar() {
                         </Box>
                         <Button
                             variant="contained"
-                            component={RouterLink}
-                            to="/sign"
-                            onClick={handleCloseNavMenu}
+                            onClick={() => Sign()}
                             sx={{
                                 my: 2,
                                 display: "block"

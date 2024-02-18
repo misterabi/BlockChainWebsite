@@ -59,7 +59,7 @@ function Footer() {
                 <Container maxWidth="lg">
                     <Grid container spacing={8}>
                         {/* Left column */}
-                        <Grid item xs={12} md={5}>
+                        <Grid item xs={12} md={4}>
                             <Grid
                                 item
                                 sx={{
@@ -73,12 +73,11 @@ function Footer() {
                                     variant="body1"
                                     sx={{ color: "#6B6F78 " }}
                                 >
-                                    Inscrivez-vous à notre newsletter pour
-                                    recevoir les dernières mises à jour et
-                                    nouvelles.
+                                    Révolutionnez la certification des diplômes
+                                    avec la Blockchain !
                                 </Typography>
                             </Grid>
-                            <Grid item xs={12} md={4}>
+                            <Grid item xs={12}>
                                 {socials.map((social) => (
                                     <IconButton
                                         key={social.title}
@@ -98,7 +97,7 @@ function Footer() {
                         </Grid>
 
                         {/* Center column */}
-                        <Grid item xs={12} md={2}>
+                        <Grid item xs={12} md={3}>
                             <Typography
                                 variant="h6"
                                 component="h2"
