@@ -7,10 +7,13 @@ function Header({ section, title, subtitle, headerImg }) {
         sx={{
           backgroundImage: `url(${headerImg})`,
           backgroundRepeat: "no-repeat",
-          backgroundSize: `contain`,
+          backgroundSize: `cover`,
           backgroundPosition: "center",
-          height: "100vh",
+          // backgroundColor: "primary.main",
           width: "100%",
+          m: 0,
+          height: "100vh",
+          color: "dark.text",
         }}
       >
         <Box

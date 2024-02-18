@@ -30,14 +30,9 @@ function TeamMember({
   instagram,
   github,
 }) {
-  const styles = {
-    experience: {
-      color: "text.secondary",
-    },
-  };
 
   return (
-    <Paper sx={{ maxWidth: "20%" }} elevation={8}>
+    <Paper sx={{ maxWidth: "23%" }} elevation={8}>
       <CardMedia sx={{ height: 225 }} image={avatar} title="team member" />
       <CardContent>
         {/* Name */}

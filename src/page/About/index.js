@@ -24,6 +24,7 @@ import avatarLeo from "../../assets/avatar-leo.png";
 import avatarSarah from "../../assets/avatar-sarah.png";
 import avatarShirley from "../../assets/avatar-shirley.png";
 import TeamMember from "../../components/memberCard";
+import headerImg from "../../assets/backgd_about.png";
 
 function About() {
     const headerData = {
@@ -32,7 +33,8 @@ function About() {
         subtitle: [
             "Excellence, accessibilité mondiale, et authenticité, portées par une équipe dévouée.",
             "Redéfinissons la confiance ensemble."
-        ]
+        ],
+        img: headerImg,
     };
 
     const valuesData = [
@@ -199,6 +201,7 @@ function About() {
                 section={headerData.section}
                 title={headerData.title}
                 subtitle={headerData.subtitle}
+                headerImg={headerData.img}
             />
             {/* Vision Block */}
             <Box
@@ -254,7 +257,7 @@ function About() {
                 }}
             >
                 <Typography
-                    width="50%"
+                    width="80%"
                     variant="subtitle2"
                     style={styles.subtitleSection}
                 >

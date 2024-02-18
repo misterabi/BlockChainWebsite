@@ -33,7 +33,7 @@ import {
 } from "@mui/lab";
 
 import { theme } from "themes/theme";
-import headerImg from "../../assets/roadmap_header.jpeg";
+import headerImg from "../../assets/backgd_roadmap.png";
 import Header from "components/layouts/Header";
 import IntersectionBlock from "components/IntersectionBlock";
 
@@ -217,7 +217,7 @@ function Roadmap() {
         section={headerData.section}
         title={headerData.title}
         subtitle={headerData.subtitle}
-        headerImg={headerData.headerImg}
+        headerImg={headerData.img}
       />
       {/* TODO: Explication de cette roadmap */}
       <Box
@@ -258,8 +258,8 @@ function Roadmap() {
           {roadmapIntroduction.map((item, index) => (
             <Typography
               key={index}
-              variant={index < 2 ? "h1" : "subtitle2"}
-              fontSize={index < 2 ? "2em" : "18px"}
+              variant={index < 2 ? "h2" : "subtitle2"}
+              fontSize={index < 2 ? "1.75em" : "16px"}
               sx={{
                 textAlign: "justify",
                 my: 2,
